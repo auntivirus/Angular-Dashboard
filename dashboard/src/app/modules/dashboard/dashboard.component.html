@@ -1,0 +1,18 @@
+<div>
+  <app-widget-area></app-widget-area>
+</div>
+<br>
+<mat-divider></mat-divider>
+<br>
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+  <mat-card fxFlex="33"><app-widget-card label="ABC123" total="2k" percentage="15" [data] = "card1"></app-widget-card></mat-card>
+  <mat-card fxFlex="33"><app-widget-card label="New User" total="1.3k" percentage="23" [data] = "card2"></app-widget-card></mat-card>
+  <mat-card fxFlex="33"><app-widget-card label="XYZ676" total="927" percentage="3" [data] = "card3"></app-widget-card></mat-card>
+</div>
+<br>
+<mat-divider></mat-divider>
+<br>
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+  <div fxFlex="60"><app-widget-table></app-widget-table></div>
+  <div fxFlex="40"><app-widget-pie [data] = "pieChart"></app-widget-pie></div>
+</div>
