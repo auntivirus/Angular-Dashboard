@@ -1,4 +1,3 @@
-import { WHITE_ON_BLACK_CSS_CLASS } from '@angular/cdk/a11y/high-contrast-mode/high-contrast-mode-detector';
 import { Component, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import HC_exporting from 'highcharts/modules/exporting';
@@ -55,6 +54,17 @@ export class AreaComponent implements OnInit {
       },
       series: [{
           name: 'Brands',
+          point: {
+            events: {
+              // click: function() {
+              //   window.open("https://www.google.co.in", '_blank');
+              // }
+              click: function() {
+                alert("Browser: "+ this.name+"\n"+"Value: "+this.y);
+                window.open("/posts");
+              }
+            }
+          },
           colorByPoint: true,
           style: {
             color: 'white',
@@ -89,7 +99,8 @@ export class AreaComponent implements OnInit {
               name: 'Other',
               y: 2.61
           }]
-      }]
+      },
+    ]
   };
   HC_exporting(Highcharts);
 
